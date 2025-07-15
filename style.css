@@ -186,6 +186,8 @@ nav a:hover::after {
   padding: 1.5rem 4rem;
   justify-content: space-around;
   align-items: center;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .header_image {
