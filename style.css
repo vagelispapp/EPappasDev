@@ -590,6 +590,7 @@ p span {
 .hobbie_icon {
   aspect-ratio: 1/1;
   border-radius: 50%;
+  background: var(--secondary_dark);
   border: 5px solid var(--secondary_dark);
   box-shadow: 0 0 0 3px var(--primary_ascend);
 }
