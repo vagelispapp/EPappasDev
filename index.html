@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>EPappasDev</title>
   </head>
   <body>
@@ -14,7 +20,7 @@
         <a href="#">Home</a>
         <a href="#personal_sector">About Me</a>
         <a href="#skills_sector">Skills</a>
-        <a href="#experience_sector">Experience</a>
+        <a href="#projects_sector">Projects</a>
         <a href="#contact_sector">Contact</a>
       </div>
     </nav>
@@ -114,6 +120,7 @@
         <div class="card left_slide">
           <h4>2015-2023</h4>
           <p>
+            <br />
             University Of Ioannina School Of Engineering Department of Computer
             Science & Engineering
           </p>
@@ -121,14 +128,52 @@
         <div class="ladder"></div>
         <div class="card right_slide">
           <h4>03/2022-04/2022</h4>
+          <h3>Frontend Developer (internship)</h3>
           <p>
-            Web Developer (internship) Company: CodeWild - Software House
-            Developed and maintained front-end components using HTML, CSS,
-            JavaScript & WordPress
+            <br />
+            Company: CodeWild - Software House Developed and maintained
+            front-end components using HTML, CSS, JavaScript & WordPress
           </p>
         </div>
       </div>
       <div class="divider_container">
+        <div class="divider_back"></div>
+        <div class="fog"></div>
+        <div class="divider_front"></div>
+      </div>
+    </section>
+    <section class="projects_sector" id="projects_sector">
+      <h3 class="centered">My Projects</h3>
+      <div class="project_card_container">
+        <div class="project_card">
+          <img
+            src="/img/project.png"
+            alt="minimal_enclosing_and_maximal_inscribed_triangles_within_a_convex_polygon"
+          />
+          <h2>Triangles in Convex Polygons for Collision Detection</h2>
+          <p>
+            Two algorithms for finding minimal enclosing and maximal inscribed
+            triangles within a convex polygon — a problem relevant to robotics
+            and collision detection. Two Python-based algorithms were developed
+            and visualized using Matplotlib: one for locating triangles with the
+            smallest possible area that enclose the polygon, and another for
+            finding the largest possible triangle inscribed within it.
+          </p>
+          <div class="tags_container">
+            <div class="tag">Python</div>
+            <div class="tag">Tensorflow</div>
+          </div>
+          <div class="project_link">
+            <a
+              href="https://github.com/vagelispapp/convex-polygon-algorithms"
+              target="_blank"
+            >
+              <img src="img/github.png" alt="github icon" class="contact_icon"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div class="divider_container_personal">
         <div class="divider_back"></div>
         <div class="fog"></div>
         <div class="divider_front"></div>
@@ -188,25 +233,15 @@
           </a>
         </div>
       </div>
-      <div class="divider_container_personal">
+      <div class="divider_container">
         <div class="divider_back"></div>
         <div class="fog"></div>
         <div class="divider_front"></div>
       </div>
     </section>
   </body>
-  <!-- <section class="upper-bar">
-    <button class="nav__btn__box">
-      <div class="nav__btn"></div>
-    </button>
-    <ul class="nav__menu">
-      <li>About Us</li>
-      <li>Contact Us</li>
-      <li>Privacy</li>
-    </ul>
-  </section> -->
   <footer>
-    <p>Copyrights 2025 <span>Evangelos Pappas</span>. All rights reserved</p>
+    <p>Copyrights 2025 <span>Evangelos Pappas</span>. All rights reserved.</p>
     <div class="footer_bar"></div>
   </footer>
   <script src="script.js"></script>
