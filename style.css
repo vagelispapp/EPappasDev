@@ -421,16 +421,16 @@ h3.centered {
   place-self: center;
 }
 
-.left_slide {
-  animation: l_slide linear;
+.card_slide {
+  animation: slide_up linear;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
 }
 
-@keyframes l_slide {
+@keyframes slide_up {
   from {
     opacity: 0.1;
-    transform: translateX(-25rem);
+    transform: translateY(25rem);
   }
   to {
     opacity: 1;
@@ -438,22 +438,6 @@ h3.centered {
   }
 }
 
-.right_slide {
-  animation: r_slide linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;
-}
-
-@keyframes r_slide {
-  from {
-    opacity: 0.1;
-    transform: translateX(25rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 .card p {
   color: var(--primary_dark);
 }
@@ -505,7 +489,8 @@ h3.centered {
 .project_card {
   background: var(--primary_dark);
   padding: 1.5rem 2rem;
-  width: min(50%, 500px);
+  width: min(60%, 500px);
+  height: max-content;
   border-radius: 1rem;
   box-shadow: 2px 2px 4px black;
   position: relative;
@@ -541,11 +526,12 @@ h3.centered {
 }
 
 .tag {
+  font-size: 0.9rem;
   border-radius: 2rem;
-  padding: 0.5rem 1rem;
+  padding: 0.2rem 1rem;
+  margin-right: 1rem;
   border: 2px solid var(--primary_ascend);
   box-shadow: 2px 2px 4px black;
-  scale: 0.7;
 }
 
 .project_link {
@@ -648,6 +634,10 @@ p span {
   .hobbies_container {
     gap: 2rem;
   }
+
+  .contact_text {
+    padding: 1rem 2rem;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -712,5 +702,14 @@ p span {
   }
   .hamburger.bars-to-x::after {
     transform: translateY(-6.5px) rotate(270deg);
+  }
+
+  .project_card_container {
+    flex-direction: column;
+    padding: 1rem 2rem;
+  }
+
+  .project_card {
+    margin: 0 auto;
   }
 }
