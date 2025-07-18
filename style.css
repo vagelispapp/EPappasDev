@@ -530,6 +530,7 @@ h3.centered {
 .tags_container {
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
   padding-top: 1rem;
   font-size: clamp(1rem, 1vw+ 1rem, 1.75rem);
   font-weight: 100;
@@ -561,7 +562,7 @@ h3.centered {
   margin: 0 auto;
   padding-bottom: 4rem;
   text-align: center;
-  width: 70%;
+  width: 80%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 5rem;
@@ -570,7 +571,7 @@ h3.centered {
 
 .hobbies_sector p,
 .contact_sector p {
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 
 footer {
@@ -589,6 +590,79 @@ p span {
   background: var(--secondary_dark);
   border: 5px solid var(--secondary_dark);
   box-shadow: 0 0 0 3px var(--primary_ascend);
+}
+
+.car {
+  position: relative;
+}
+
+.car::before,
+.car::after {
+  content: "";
+  position: absolute;
+  width: 15%;
+  aspect-ratio: 1/1;
+  top: 45%;
+  filter: blur(4px);
+}
+
+.car::after {
+  left: 65%;
+}
+
+.car::before {
+  right: 65%;
+  z-index: 1;
+}
+
+.car:hover::before,
+.car:hover::after {
+  background: #fff;
+  animation: lights 0.2s linear alternate;
+}
+
+@keyframes lights {
+  0% {
+    background: #fff;
+  }
+  50% {
+    background: transparent;
+  }
+  100% {
+    background: #fff;
+  }
+}
+
+.headset:hover {
+  animation: shake 0.5s linear;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.basketball:hover {
+  animation: roll 0.5s linear;
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(365deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .select {
@@ -618,6 +692,10 @@ p span {
     margin-bottom: 1rem;
   }
 
+  .personal_info {
+    max-width: 80%;
+  }
+
   .ladder {
     display: none;
   }
@@ -642,11 +720,18 @@ p span {
 
   .contact_container,
   .hobbies_container {
-    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .contact_text {
     padding: 1rem 2rem;
+  }
+
+  .contact_container {
+    width: 95%;
+    gap: 1.5rem;
   }
 }
 
