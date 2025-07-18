@@ -801,6 +801,10 @@ p span {
     transform: translateY(-6.5px) rotate(270deg);
   }
 
+  .description_container {
+    padding: 1.5rem 4rem;
+  }
+  
   .project_card {
     margin: 0 auto;
   }
