@@ -52,7 +52,6 @@ p {
 
 nav {
   display: flex;
-  justify-content: center;
   align-items: center;
   padding: 1.5rem 5rem;
   position: sticky;
@@ -204,7 +203,6 @@ header p {
   background: transparent;
   color: var(--primary_ascend);
   text-decoration: none;
-  font-size: large;
   border-radius: 5px;
   border: 2px solid var(--primary_ascend);
   cursor: pointer;
@@ -268,16 +266,27 @@ header p {
   position: absolute;
   left: 0;
   background: var(--primary_dark);
-  border-left: 2px solid var(--primary_ascend);
-  animation: typing 4s steps(18) infinite;
+  animation: typing 4s steps(18) infinite, blinking 0.5s steps(18) infinite;
 }
 
 @keyframes typing {
   50% {
-    left: 100%;
+    left: 98%;
+  }
+  70% {
+    left: 98%;
   }
   100% {
     left: 0;
+  }
+}
+
+@keyframes blinking {
+  from {
+    border-left: 2px solid var(--primary_ascend);
+  }
+  to {
+    border: none;
   }
 }
 
@@ -483,6 +492,7 @@ h3.centered {
   padding: 1.5rem 4rem;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 
@@ -618,7 +628,7 @@ p span {
   }
 
   .typewriter_container ul {
-    height: 1.5rem;
+    height: 1.9rem;
     margin-bottom: 1rem;
   }
 
@@ -685,6 +695,7 @@ p span {
   .hamburger::after {
     top: 6px;
   }
+
   .hamburger::before {
     bottom: 6px;
   }
@@ -702,11 +713,6 @@ p span {
   }
   .hamburger.bars-to-x::after {
     transform: translateY(-6.5px) rotate(270deg);
-  }
-
-  .project_card_container {
-    flex-direction: column;
-    padding: 1rem 2rem;
   }
 
   .project_card {
