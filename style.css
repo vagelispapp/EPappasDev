@@ -181,7 +181,7 @@ nav a:hover::after {
 
 .description_container {
   display: flex;
-  padding: 1.5rem 4rem;
+  padding: 1.5rem 10rem;
   justify-content: space-around;
   align-items: center;
 }
