@@ -487,8 +487,11 @@ h3.centered {
   background: var(--secondary_dark);
 }
 
-.project_card_container {
+.projects_sector {
   background: var(--secondary_dark);
+}
+
+.project_card_container {
   padding: 1.5rem 4rem;
   display: flex;
   justify-content: space-around;
@@ -551,6 +554,14 @@ h3.centered {
   scale: 0.8;
   top: 1.5rem;
   right: 2rem;
+}
+
+.github_button .contact_btn {
+  margin: 1rem auto;
+  padding: 1rem 2rem;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .contact_sector,
